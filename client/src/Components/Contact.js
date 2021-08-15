@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import {gitGreen, gitLight} from './ProjectInstance';
 import axios from 'axios';
-const PORT = process.env.PORT || 3001;
 
 //please work
 
@@ -29,7 +28,7 @@ function Contact () {
 
         axios({
             method: "POST",
-            url: `http://${PORT}/send`,
+            url: `https://warm-crag-71578.herokuapp.com/send`,
             data: {
                 name,
                 email,
