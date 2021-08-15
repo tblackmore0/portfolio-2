@@ -35,7 +35,6 @@ function Contact () {
         }).then((response)=>{
             if (response.data.msg === 'success'){
                 alert("Email sent, awesome!");
-        //        this.resetForm()
             }else if(response.data.msg === 'fail'){
                 alert("Oops, something went wrong. Try again")
             }else (alert('hmmm'))
