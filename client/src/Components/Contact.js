@@ -18,8 +18,8 @@ function Contact () {
 
 
     const [name, setName] = useState("");
-    const [email, setEmail] = useState("")
-    const [text, setText] = useState("")
+    const [email, setEmail] = useState("");
+    const [text, setText] = useState("");
 
     const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,12 +32,6 @@ function Contact () {
                 email,
                 text
             }
-        }).then((response)=>{
-            if (response.data.msg === 'success'){
-                alert("Email sent, awesome!");
-            }else if(response.data.msg === 'fail'){
-                alert("Oops, something went wrong. Try again")
-            }else (alert('hmmm'))
         })
     }
 
