@@ -62,7 +62,7 @@ app.post('/send', (req, res, next) => {
   const message = req.body.messageHtml
 
 
-  var mailOptions = {
+  var mail = {
     from: email,
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
