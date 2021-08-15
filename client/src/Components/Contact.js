@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {gitGreen, gitLight} from './ProjectInstance';
 import axios from 'axios';
+const PORT = process.env.PORT || 3001;
 
 //please work
 
@@ -28,7 +29,7 @@ function Contact () {
 
         axios({
             method: "POST",
-            url: "http://localhost:3001/send",
+            url: `http://${PORT}/send`,
             data: {
                 name,
                 email,

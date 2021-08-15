@@ -2,7 +2,6 @@ const path = require('path');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-const http = require('http');
 
 const app = express();
 
@@ -67,8 +66,6 @@ app.post('/send', (req, res, next) => {
     }
   })
 })
-
-const server = http.createServer(app);
 
 server.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
