@@ -45,7 +45,7 @@ transporter.verify((error, success) => {
 
 //Transporter v.2
 
-var mail = nodemailer.createTransport({
+var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.USER,
