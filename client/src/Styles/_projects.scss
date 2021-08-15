@@ -1,0 +1,86 @@
+.projectsDiv {
+    height: 120vh;
+    width: 100vw;
+    background-color: $siteBackground;
+    @include flexCenter(column);
+
+    h2 {
+        width: 100vw;
+        font-size: 6vh;
+        color: $highlightText;
+        height: 10%;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: $highlightText;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.projectInstanceDiv {
+    @include flexCenter(row);
+    width: 100vw;
+    height: 20%;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: $highlightText;
+
+    img {
+        height: 100%;
+        width: auto;
+        border: solid;
+        border-width: 2px;
+        border-color: $highlightText;
+        object-fit: cover;
+    }
+
+    .textDiv {
+        height: 100%;
+        width: 80vw;
+        @include flexCenter (column);
+        h3 {
+            font-size: 3.5vh;
+            color: $highlightText;
+        }
+        p {
+            font-size: 2vh;
+            color: $primaryText;
+        }
+        .projectButtons {
+            @include flexCenter (row);
+            width: 100%;
+            height: 20%;
+            gap: 3vw;
+            
+        }
+
+        img {
+            width: 2vw;
+            height: auto;
+            border: none; 
+        }
+
+        .siteButton {
+            width: 5vw;
+            height: 3vh;
+            border: solid;
+            border-color: $highlightText;
+            color: $highlightText;
+            text-decoration: none;
+            text-align: center;
+            font-size: 2vh;
+
+
+            &:hover {
+                background-color: $highlightText;
+                color: $siteBackground;
+            }}
+
+        .codeButton {
+            display: flex;
+            margin: 0;
+        padding: 0;        
+    }
+
+    }
+}

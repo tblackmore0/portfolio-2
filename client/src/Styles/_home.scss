@@ -1,0 +1,123 @@
+.homeDiv {
+    width: 100vw;
+    height: 100vh;
+    @include flexCenter (column);
+    gap: 10%;
+
+#particlesJs {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.homeText {
+    height: 70vh;
+    width: 90vw;
+    gap: 5%;
+    @include flexCenter (row);
+    margin-top: 10vh;
+    
+    
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 3%;
+        
+    
+
+    p {
+        display: flex;
+        flex-direction: row;
+        font-size: 12vh;
+        color: $primaryText;
+        z-index: 3;
+        
+
+        &:hover {
+            cursor: default;
+        }
+
+
+        span {
+
+        
+
+        &:hover {
+            color: $highlightText;
+            cursor: default;
+            animation: move-text 0.3s ease-out;
+        }
+
+        @keyframes move-text {
+            0% {
+                transform: scale(1.25)
+            }
+        }
+    }
+    }
+}
+}
+}
+
+.homeShape {
+    width: 0.5vw;
+    height: 60vh;
+    background-color: $highlightText;
+    transform: rotate(30deg);
+}
+
+#firstWord {
+    margin-bottom: 15vh;
+}
+
+#secondWord {
+    margin-top: 15vh;
+}
+
+.arrowDiv {
+    height: 5vh;
+    width: 5vw;
+    animation-name: arrow-bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+
+    @keyframes arrow-bounce {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(15px);
+        }
+        
+    }
+
+.homeArrow {
+    color: $highlightText;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 2px;
+    width: 1px;
+    height: 16px;
+    background-color: currentColor;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        border-top: solid 1px currentColor;
+        border-right: solid 1px currentColor;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+}
+    
+}

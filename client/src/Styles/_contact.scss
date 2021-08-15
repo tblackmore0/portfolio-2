@@ -1,0 +1,119 @@
+.contactDiv {
+    width: 100vw;
+    height: 100vh;
+    @include flexCenter (column);
+    justify-content: flex-start;
+    gap: 2vh;
+    background-color: rgb(56, 50, 50);
+    border: solid;
+        border-width: 2px;
+        border-color: $highlightText;
+
+}
+
+.contactDetails {
+    width: 100vw;
+    height: 30vh;
+    @include flexCenter (row);
+    gap: 10%;
+
+    .contactIcon {
+        display: flex;
+        margin: 0;
+        padding: 0;   
+
+    }    
+
+    img {   
+        width: 4vw;
+        height: auto;
+
+    }
+
+        .contactText {
+
+            @include flexCenter (column);
+
+            h2{ 
+                height: 4vh;
+                font-size: 6vh;
+                color: $highlightText;
+
+            }
+
+            p{
+                height: auto;
+                font-size: 3vh;
+                color: $primaryText;
+
+            }
+        }
+
+}
+
+
+
+.contactForm {
+    width: 90vw;
+    height: 60vh;
+    @include flexCenter (column);
+
+    form { 
+        @include flexCenter(column);
+
+    .formTop {
+        @include flexCenter (row);
+        gap: 2vw;
+        width: 90vw;
+        height: 1vh;
+
+
+        input{
+            width: 20vw;
+            height: auto;
+            font-size: 2.3vh;
+            background-color: $siteBackground;
+            color: $primaryText;
+            border: none;
+        }
+
+    }
+
+    .formBottom {
+        @include flexCenter (row);
+        gap: 10%;
+        width: 100%;
+        height: 50vh;
+
+        textarea {
+            width: 50vw;
+            font-size: 2vh;
+            height: 40vh;
+            background-color: $siteBackground;
+            color: $primaryText;
+            border: none;
+            resize: none;
+        }
+
+    }
+
+    button {
+        width: 5vw;
+        height: 4vh;
+        border: solid;
+        border-color: $highlightText;
+        color: $highlightText;
+        text-decoration: none;
+        text-align: center;
+        font-size: 2vh;
+        background: none;
+        border-width: 2px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $highlightText;
+            color: $siteBackground;
+        }
+    }
+}
+}

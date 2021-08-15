@@ -1,0 +1,680 @@
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 10vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  position: absolute;
+}
+
+.navLinkSection {
+  width: 30vw;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navLinkDiv {
+  width: 33%;
+  height: inherit;
+  text-align: center;
+  padding-top: 3vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navLinkDiv p {
+  color: #02e499;
+  font-size: 2.5vh;
+  -webkit-transition: ease-in-out, 0.4s;
+  transition: ease-in-out, 0.4s;
+  margin: 0;
+  padding: 1vw;
+}
+
+.navLinkDiv p:hover {
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.homeDiv {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10%;
+}
+
+.homeDiv #particlesJs {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.homeDiv .homeText {
+  height: 70vh;
+  width: 90vw;
+  gap: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10vh;
+}
+
+.homeDiv .homeText div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 3%;
+}
+
+.homeDiv .homeText div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 12vh;
+  color: #fff8f4;
+  z-index: 3;
+}
+
+.homeDiv .homeText div p:hover {
+  cursor: default;
+}
+
+.homeDiv .homeText div p span:hover {
+  color: #02e499;
+  cursor: default;
+  -webkit-animation: move-text 0.3s ease-out;
+          animation: move-text 0.3s ease-out;
+}
+
+@-webkit-keyframes move-text {
+  0% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
+
+@keyframes move-text {
+  0% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
+
+.homeShape {
+  width: 0.5vw;
+  height: 60vh;
+  background-color: #02e499;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+#firstWord {
+  margin-bottom: 15vh;
+}
+
+#secondWord {
+  margin-top: 15vh;
+}
+
+.arrowDiv {
+  height: 5vh;
+  width: 5vw;
+  -webkit-animation-name: arrow-bounce;
+          animation-name: arrow-bounce;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes arrow-bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+}
+
+@keyframes arrow-bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+}
+
+.arrowDiv .homeArrow {
+  color: #02e499;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 2px;
+  width: 1px;
+  height: 16px;
+  background-color: currentColor;
+}
+
+.arrowDiv .homeArrow::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 3px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.aboutDiv {
+  width: 100vw;
+  height: 80vh;
+  background-color: #383232;
+  margin: 0;
+  padding: 0;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #02e499;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.aboutDiv img {
+  width: 25vw;
+  height: auto;
+  border: solid;
+  border-width: 2px;
+  border-radius: 100%;
+  border-color: #02e499;
+}
+
+.aboutTextDiv {
+  width: 70vw;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: inherit;
+  height: 37vh;
+  text-align: center;
+}
+
+.aboutText h2 {
+  height: auto;
+  font-size: 6vh;
+  color: #02e499;
+  margin-bottom: 3vh;
+}
+
+.aboutText p {
+  height: auto;
+  font-size: 3vh;
+  color: #fff8f4;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  margin-top: 0.7vh;
+}
+
+.projectsDiv {
+  height: 120vh;
+  width: 100vw;
+  background-color: #272424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projectsDiv h2 {
+  width: 100vw;
+  font-size: 6vh;
+  color: #02e499;
+  height: 10%;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #02e499;
+  text-align: center;
+  margin: 0;
+}
+
+.projectInstanceDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  height: 20%;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #02e499;
+}
+
+.projectInstanceDiv img {
+  height: 100%;
+  width: auto;
+  border: solid;
+  border-width: 2px;
+  border-color: #02e499;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.projectInstanceDiv .textDiv {
+  height: 100%;
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projectInstanceDiv .textDiv h3 {
+  font-size: 3.5vh;
+  color: #02e499;
+}
+
+.projectInstanceDiv .textDiv p {
+  font-size: 2vh;
+  color: #fff8f4;
+}
+
+.projectInstanceDiv .textDiv .projectButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 20%;
+  gap: 3vw;
+}
+
+.projectInstanceDiv .textDiv img {
+  width: 2vw;
+  height: auto;
+  border: none;
+}
+
+.projectInstanceDiv .textDiv .siteButton {
+  width: 5vw;
+  height: 3vh;
+  border: solid;
+  border-color: #02e499;
+  color: #02e499;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2vh;
+}
+
+.projectInstanceDiv .textDiv .siteButton:hover {
+  background-color: #02e499;
+  color: #272424;
+}
+
+.projectInstanceDiv .textDiv .codeButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.contactDiv {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2vh;
+  background-color: #383232;
+  border: solid;
+  border-width: 2px;
+  border-color: #02e499;
+}
+
+.contactDetails {
+  width: 100vw;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10%;
+}
+
+.contactDetails .contactIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.contactDetails img {
+  width: 4vw;
+  height: auto;
+}
+
+.contactDetails .contactText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactDetails .contactText h2 {
+  height: 4vh;
+  font-size: 6vh;
+  color: #02e499;
+}
+
+.contactDetails .contactText p {
+  height: auto;
+  font-size: 3vh;
+  color: #fff8f4;
+}
+
+.contactForm {
+  width: 90vw;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactForm form .formTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2vw;
+  width: 90vw;
+  height: 1vh;
+}
+
+.contactForm form .formTop input {
+  width: 20vw;
+  height: auto;
+  font-size: 2.3vh;
+  background-color: #272424;
+  color: #fff8f4;
+  border: none;
+}
+
+.contactForm form .formBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10%;
+  width: 100%;
+  height: 50vh;
+}
+
+.contactForm form .formBottom textarea {
+  width: 50vw;
+  font-size: 2vh;
+  height: 40vh;
+  background-color: #272424;
+  color: #fff8f4;
+  border: none;
+  resize: none;
+}
+
+.contactForm form button {
+  width: 5vw;
+  height: 4vh;
+  border: solid;
+  border-color: #02e499;
+  color: #02e499;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2vh;
+  background: none;
+  border-width: 2px;
+}
+
+.contactForm form button:hover {
+  cursor: pointer;
+  background-color: #02e499;
+  color: #272424;
+}
+
+.copyrightDiv {
+  width: 100vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #272424;
+}
+
+.copyrightDiv p {
+  font-size: 2.5vh;
+  color: #fff8f4;
+  font-weight: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #272424;
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=style.css.map */

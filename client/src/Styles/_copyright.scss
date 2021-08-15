@@ -1,0 +1,12 @@
+.copyrightDiv {
+    width: 100vw;
+    height: 10vh;
+    @include flexCenter (column);
+    background-color: $siteBackground;
+
+    p {
+        font-size: 2.5vh;
+        color: $primaryText;
+        font-weight: inherit;
+    }
+}

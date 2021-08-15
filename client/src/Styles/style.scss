@@ -1,0 +1,16 @@
+@import "./variables";
+@import "./navBar";
+@import "./home";
+@import "./about";
+@import "./projects";
+@import "./contact";
+@import "./copyright";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:$siteBackground;
+    overflow-x: hidden;
+  }
+  
