@@ -45,23 +45,20 @@ transporter.verify((error, success) => {
 
 //Transporter v.2
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.USER,
-    pass: process.env.PASS
-  }
-});
-
-
-
 //POST
 app.post('/send', (req, res, next) => {
   const name = req.body.name
   const email = req.body.email
   const message = req.body.messageHtml
 
-
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.USER,
+      pass: process.env.PASS
+    }
+  });
+  
   var mail = {
     from: email,
     to: 'tblackmore0@gmail.com',
@@ -69,10 +66,10 @@ app.post('/send', (req, res, next) => {
     html: message,
   };
 
-  transporter.sendMail(mail, (err, data) => {
+  transporter.sendMail(mail, (err) => {
     if (err) {
       res.json({
-        msg: 'fail'
+        msg: err
       })
     } else {
       res.json({
