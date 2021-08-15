@@ -1,6 +1,6 @@
 {
   "proxy": "http://localhost:3001/",
-  "homepage": "https://tblackmore0.github.io/portfolio-2/",
+  "homepage": ".",
   "name": "client",
   "version": "0.1.0",
   "private": true,
