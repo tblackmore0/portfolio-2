@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const http = require('http');
 
 const app = express();
 
@@ -17,7 +18,6 @@ app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
-console.log('fuck this');
 // TRANSPORTER
 
 let transport = {
