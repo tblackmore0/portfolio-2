@@ -17,7 +17,8 @@ app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
-// TRANSPORTER
+// TRANSPORTER v.1
+/*
 
 let transport = {
   host: "smtp.mailtrap.io",
@@ -38,6 +39,21 @@ transporter.verify((error, success) => {
   }
 });
 
+*/
+
+
+
+//Transporter v.2
+
+var mail = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.USER,
+    pass: process.env.PASS
+  }
+});
+
+
 
 //POST
 app.post('/send', (req, res, next) => {
@@ -46,13 +62,12 @@ app.post('/send', (req, res, next) => {
   const message = req.body.messageHtml
 
 
-  var mail = {
-    from: name,
+  var mailOptions = {
+    from: email,
     to: 'tblackmore0@gmail.com',
-    subject: 'Test',
-
+    subject: 'Portfolio message',
     html: message
-  }
+  };
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {

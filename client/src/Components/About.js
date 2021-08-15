@@ -14,8 +14,8 @@ function About () {
                 <div className='aboutText'>
                     <h2>Skills</h2>
                     <p> Front-end: React, Javascript, CSS, SASS/SCSS, HTML </p>
-                    <p> Back-end: Node, Express, AWS, MongoDB (Atlas)</p>
-                    <p> Development tools: Git/GitHub, Webpack, Postman, NPM</p>
+                    <p> Back-end: Node, Express</p>
+                    <p> Development tools: Git/GitHub, Webpack, Heroku, NPM</p>
 
             </div>
             </div>

@@ -27,12 +27,20 @@ function Contact () {
 
         axios({
             method: "POST",
-            url: `https://tblackmore.herokuapp.com//send`,
+            url: `https://tblackmore.herokuapp.com/send`,
             data: {
                 name,
                 email,
                 text
             }
+        }).then(() => {
+            alert('Thank you for getting in touch!');
+            setName('');
+            setEmail('');
+            setText('');
+        }).catch((error) => {
+            console.log(error);
+            alert('Something went wrong. Please try again!')
         })
     }
 
