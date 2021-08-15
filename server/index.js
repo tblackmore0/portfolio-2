@@ -68,8 +68,8 @@ app.post('/send', (req, res, next) => {
   })
 })
 
+const server = http.createServer(app);
 
-
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
