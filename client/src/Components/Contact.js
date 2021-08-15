@@ -27,7 +27,7 @@ function Contact () {
 
         axios({
             method: "POST",
-            url: `https://warm-crag-71578.herokuapp.com/send`,
+            url: `https://tblackmore.herokuapp.com//send`,
             data: {
                 name,
                 email,
