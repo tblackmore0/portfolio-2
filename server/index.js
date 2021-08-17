@@ -45,21 +45,23 @@ transporter.verify((error, success) => {
 
 //Transporter v.2
 
+let mailgunAuth = {
+  auth: {
+    api_key: "83b3511e44e04bf89532179fb51e8634-9776af14-a8e85238",
+    domain: "sandbox5e183501eea040f4819e22e263a76265.mailgun.org"
+  }
+}
+
+let transporter = nodemailer.createTransport(mg(mailgunAuth));
+
 //POST
 app.post('/send', (req, res, next) => {
   const name = req.body.name
   const email = req.body.email
   const message = req.body.messageHtml
 
-  var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.USER,
-      pass: process.env.PASS
-    }
-  });
   
-  var mail = {
+  let mail = {
     from: email,
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
