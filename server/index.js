@@ -33,7 +33,7 @@ let transporter = nodemailer.createTransport(mg(mailgunAuth));
 app.post('/send', (req, res, next) => {
   const name = req.body.name;
   const email = req.body.email;
-  const message = req.body.messageHtml;
+  const message = req.body.text;
 
   console.log(name);
   console.log(email);
