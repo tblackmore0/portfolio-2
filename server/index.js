@@ -35,16 +35,17 @@ app.post('/send', (req, res, next) => {
   const email = req.body.email;
   const message = req.body.text;
 
-  console.log(name);
-  console.log(email);
-  console.log(message);
-
   
   let mail = {
     from: email,
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
-    html: message,
+    
+    html: `
+    Name: ${name},
+    
+    ${message}`,
+
     text: message,
   };
 
