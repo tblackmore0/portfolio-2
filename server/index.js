@@ -40,11 +40,14 @@ app.post('/send', (req, res, next) => {
     from: email,
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
+
+    html:
+    `
+    <h2>Name: ${name}</h2>
+    <br>
+    <p>${message}</p>
     
-    html: `
-    Name: ${name},
-    
-    ${message}`,
+    `,
 
     text: message,
   };
