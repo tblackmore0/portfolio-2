@@ -57,17 +57,20 @@ let transporter = nodemailer.createTransport(mg(mailgunAuth));
 
 //POST
 app.post('/send', (req, res, next) => {
-  const name = req.body.name
-  const email = req.body.email
-  const message = req.body.messageHtml
+  const name = req.body.name;
+  const email = req.body.email;
+  const text = req.body.messageHtml;
+  const message = `Sender: ${name},
+  
+                  ${text}`
 
   
   let mail = {
-    from: `${email}`,
+    from: email,
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
-    html: `${message}`,
-    text: `${message}`,
+    html: message,
+    text: message,
   };
 
   transporter.sendMail(mail, (err) => {
