@@ -63,10 +63,11 @@ app.post('/send', (req, res, next) => {
 
   
   let mail = {
-    from: email,
+    from: `${email}`,
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
-    html: message,
+    html: `${message}`,
+    text: `${message}`,
   };
 
   transporter.sendMail(mail, (err) => {
