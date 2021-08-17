@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const mg = require("nodemailer-mailgun-transport");
 
 const app = express();
 
