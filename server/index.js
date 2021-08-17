@@ -18,33 +18,7 @@ app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
-// TRANSPORTER v.1
-/*
 
-let transport = {
-  host: "smtp.mailtrap.io",
-  port: 2525,
-  auth: {
-      user: "c493566e985378",
-      pass: "3dfebe45f8b6c8"
-  }
-}
-
-let transporter = nodemailer.createTransport(transport)
-
-transporter.verify((error, success) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('All works fine, congratz!');
-  }
-});
-
-*/
-
-
-
-//Transporter v.2
 
 let mailgunAuth = {
   auth: {
@@ -59,10 +33,11 @@ let transporter = nodemailer.createTransport(mg(mailgunAuth));
 app.post('/send', (req, res, next) => {
   const name = req.body.name;
   const email = req.body.email;
-  const text = req.body.messageHtml;
-  const message = `Sender: ${name},
-  
-                  ${text}`
+  const message = req.body.messageHtml;
+
+  console.log(name);
+  console.log(email);
+  console.log(message);
 
   
   let mail = {
