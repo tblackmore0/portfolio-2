@@ -4,6 +4,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mg = require("nodemailer-mailgun-transport");
 const { env } = require('process');
+var sgTransport = require('nodemailer-sendgrid-transport');
 
 const app = express();
 
@@ -20,15 +21,14 @@ res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 
-let transporter = nodemailer.createTransport({
-  host: "smtp.sendgrid.net",
-  port: 465,
-  auth : {
+let options  = {
+  auth: {
     api_user: process.env.USER,
     api_key: process.env.API
-
   }
-})
+}
+
+let client = nodemailer.createTransport(sgTransport(options));
 
 //POST
 app.post('/send', (req, res, next) => {
@@ -53,7 +53,7 @@ app.post('/send', (req, res, next) => {
     text: message,
   };
 
-  transporter.sendMail(mail, (err) => {
+  client.sendMail(mail, (err) => {
     if (err) {
       res.json({
         msg: err
