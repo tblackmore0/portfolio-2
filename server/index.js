@@ -3,6 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mg = require("nodemailer-mailgun-transport");
+const { env } = require('process');
 
 const app = express();
 
@@ -19,15 +20,15 @@ res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 
+let transporter = nodemailer.createTransport({
+  host: "smtp.sendgrid.net",
+  port: 465,
+  auth : {
+    api_user: process.env.USER,
+    api_key: process.env.API
 
-let mailgunAuth = {
-  auth: {
-    api_key: process.env.API,
-    domain: process.env.DOMAIN
   }
-}
-
-let transporter = nodemailer.createTransport(mg(mailgunAuth));
+})
 
 //POST
 app.post('/send', (req, res, next) => {
