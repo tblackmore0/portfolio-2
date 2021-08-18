@@ -1,4 +1,4 @@
-.contactDiv {
+.contactDiv  {
     width: 100vw;
     height: 100vh;
     @include flexCenter (column);
@@ -36,14 +36,14 @@
 
             h2{ 
                 height: 4vh;
-                font-size: 6vh;
+                font-size: 3vw;
                 color: $highlightText;
 
             }
 
             p{
                 height: auto;
-                font-size: 3vh;
+                font-size: 1.5vw;
                 color: $primaryText;
 
             }
@@ -66,7 +66,7 @@
             height: 5vh;
             padding-left: 1vw;
             padding-right: 1vw;
-            font-size: 2.3vh;
+            font-size: 1.15vw;
             background-color: $siteBackground;
             color: $primaryText;
             border: none;
@@ -84,7 +84,7 @@
 
         textarea {
             width: 50vw;
-            font-size: 2.3vh;
+            font-size: 1.15vw;
             height: 40vh;
             background-color: $siteBackground;
             color: $primaryText;
@@ -94,14 +94,14 @@
             padding-right: 1vw;
             padding-top: 1vh;
             padding-bottom: 1vh;
-            font: inherit;
+            font-family: 'Space Grotesk', sans-serif;
 
         }
 
     }
 
     button {
-        width: 5vw;
+        width: 10vw;
         height: 4vh;
         border: solid;
         border-color: $highlightText;
@@ -109,7 +109,7 @@
         color: $highlightText;
         text-decoration: none;
         text-align: center;
-        font-size: 2vh;
+        font-size: 1vw;
         background-color: $siteBackground;
         background: linear-gradient(to left, rgb(56, 50, 50) 50%, $highlightText 50%) right;
         background-size: 200%;
@@ -122,3 +122,83 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 500px) {
+
+    .contactDiv {
+        height: 140vh;
+        gap: 0;
+    }
+
+    .contactDetails {
+        width: 100vw;
+        height: 60vh;
+        @include flexCenter (column);
+        gap: 5%;
+
+
+    .contactText {
+        h2 {
+            font-size: 7.5vw;
+        }
+
+        p {
+           font-size: 5.5vw; 
+        }
+    }
+
+    
+        .contactIcon {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            order: 2;
+            margin-bottom: 1vh;
+            margin-top: 2vh;
+    
+        }    
+    
+        img {   
+            width: auto;
+            height: 9vh;
+    
+        }}
+
+    .contactForm {
+        form {
+            
+            .formTop {  
+            @include flexCenter(column);
+            margin-top: 1vw;
+
+            input {
+                width: 80vw;
+                height: 5vh;
+                margin-top: 2vh;
+                font-size: 4.5vw;
+            }
+        }
+            .formBottom {
+
+            
+
+            textarea {
+                width: 85vw;
+                font-size: 4.5vw;
+            }
+
+        }}
+    
+    
+    button {
+        width: 30%;
+        height: 8%;
+        margin-top: 5%;
+    }}
+
+
+
+
+    }
+    

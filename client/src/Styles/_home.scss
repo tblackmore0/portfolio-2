@@ -28,12 +28,13 @@
         flex-direction: row;
         gap: 4%;
         
+        
     
 
     p {
         display: flex;
         flex-direction: row;
-        font-size: 11.5vh;
+        font-size: 4.5vw;
         color: $primaryText;
         z-index: 3;
         
@@ -123,3 +124,53 @@
 }
     
 }
+
+@media only screen and (max-width: 500px) {
+
+    .homeDiv {
+        @include flexCenter (column);
+        gap: 10%;
+        background-color: $siteBackground;
+
+
+    .homeText {
+
+        flex-direction: column;
+        gap:0;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 6%;
+            
+        
+    
+        p {
+            display: flex;
+            flex-direction: row;
+            font-size: 9vw;
+            color: $primaryText;
+            z-index: 3;
+    }
+}}}
+
+
+.homeShape {
+    width: 0.5vw;
+    height: 50vw;
+    background-color: $highlightText;
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+#firstWord {
+    margin-bottom: 0;
+}
+
+#secondWord {
+    margin-top: 0;
+}
+
+}
+
+// @media only screen and (max-width: 1500px) and (min-width: 500px)

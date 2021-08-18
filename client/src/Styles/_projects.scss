@@ -3,13 +3,13 @@
     width: 100vw;
     background-color: $siteBackground;
     @include flexCenter(column);
-    gap: 15vh;
+    gap: 10vw;
     padding-top: 5vh;
     padding-bottom: 10vh;
 
     h2 {
         width: 100vw;
-        font-size: 6vh;
+        font-size: 3vw;
         color: $highlightText;
         height: 10%;
         text-align: center;
@@ -23,8 +23,8 @@
     height: 45vh;
 
     img {
-        height: 45vh;
-        width: auto;
+        height: auto;
+        width: 50vw;
         object-fit: cover;
         border-radius: 10px;
         border: solid;
@@ -41,7 +41,7 @@
 
 
         h3 {
-            font-size: 3.5vh;
+            font-size: 1.9vw;
             color: $highlightText;
         }
 
@@ -54,12 +54,14 @@
             border-radius: 10px;
         
         p {
-            font-size: 2.5vh;
+            font-size: 1.25vw;
             color: $primaryText;
             margin-left: 2vw;
             margin-right: 2vw;
             
         }}
+
+
         .projectButtons {
             @include flexCenter (row);
             width: 100%;
@@ -70,7 +72,7 @@
         }
 
         img {
-            width: 2vw;
+            width: 3vw;
             height: auto;
             border: none; 
             z-index: 2;
@@ -86,7 +88,7 @@
             color: $highlightText;
             text-decoration: none;
             text-align: center;
-            font-size: 2vh;
+            font-size: 1vw;
             background-color: $siteBackground;
             background: linear-gradient(to left, $siteBackground 50%, $highlightText 50%) right;
             background-size: 200%;
@@ -104,12 +106,104 @@
             padding: 0;        
     }
 
+}}
+
+
+#textDivOpp {
+    align-items: flex-start;
+
+}
+
+#pDivOpp {
+    text-align: start;
+
+}
+
+#projectButtonsOpp {
+    justify-content: flex-start;
+
+}
+
+    @media only screen and (max-width: 500px) {
+
+        .projectsDiv {
+            height: 350vh;
+            gap: 10vh;
+
+            h2 {
+                font-size: 7.5vw;
+            }
+        
+        }
+
+        .projectInstanceDiv {
+            flex-direction: column;
+            height: 80vh;
+
+        
+        img {
+            width: 90vw;
+            height: 30vh;
+            order: 1;
+        }
+
+        .textDiv {
+            width: 80vw;
+            height: 45vh;
+            order: 2;
+            align-items: center;
+            
+            h3 {
+                text-align: center;
+                font-size: 6vw;
+            }
+
+            .pDiv {
+                width: 85vw;
+                height: 20vh;
+                text-align: center;
+
+                p {
+                    font-size: 4.5vw;
+                }
+            }
+
+            .projectButtons {
+                justify-content: center;
+                gap: 10vw;
+                height: 10vh;
+
+                img {
+                    width: auto;
+                    height: 7vh;
+                }
+
+                .siteButton {
+                    width: 27vw;
+                    height: 3vh;
+                    font-size: 3.5vw;
+                }
+
+            }
+        }
+
+     
     }
-}
 
 
-.backgroundImage {
-    position: absolute;
-    width: 20vw;
-    height: 20vh;
-}
+    #textDivOpp {
+        align-items: center;
+    
+    }
+    
+    #pDivOpp {
+        text-align: center;
+    
+    }
+    
+    #projectButtonsOpp {
+        justify-content: center;
+    
+
+}}
+

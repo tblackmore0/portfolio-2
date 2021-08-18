@@ -26,6 +26,7 @@
     width: 70vw;
     height: inherit;
     @include flexCenter (column);
+    gap: 5vh;
 
 }
 
@@ -33,22 +34,64 @@
 .aboutText {
     @include flexCenter (column);
     width: inherit;
-    height: 37vh;
+    height: 32vh;
     text-align: center;
+
 
     h2 {
         height: auto;
-        font-size: 6vh;
+        font-size: 3vw;
         color: $highlightText;
         margin-bottom: 3vh;
     }
 
     p {
         height: auto;
-        font-size: 3vh;
+        font-size: 1.5vw;
         color: $primaryText;
         margin-right: 5vw;
         margin-left: 5vw;
         margin-top: 0.7vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .aboutDiv {
+        flex-direction: column;
+        height: inherit;
+
+        img {
+            width: 50vw;
+            margin-top: 5vh;
+            margin-bottom: 2vh;
+        }
+    }
+
+    .aboutTextDiv {
+        width: 90vw;
+        height: 90vh;
+        @include flexCenter (column);
+    
+    }
+    
+    
+    .aboutText {
+        height: 37vh;
+    
+        h2 {
+            height: auto;
+            font-size: 7.5vw;
+            color: $highlightText;
+            margin-bottom: 2vh;
+        }
+    
+        p {
+            font-size: 4.5vw;
+            color: $primaryText;
+            margin-right: 2vw;
+            margin-left: 2vw;
+            margin-top: 0.2vh;
+        }
     }
 }

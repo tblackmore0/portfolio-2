@@ -40,12 +40,12 @@ function ProjectInstance (props) {
         return (
 
         <div className='projectInstanceDiv'>
-            <div className='textDiv' style={{alignItems: "flex-start"}} >
+            <div className='textDiv' id='textDivOpp' >
                 <h3>{props.project.title}</h3>
-                <div className='pDiv' style={{textAlign: "start"}}>
+                <div className='pDiv' id='pDivOpp' >
                 <p>{props.project.description}</p>
                 </div>
-                <div className='projectButtons' style={{justifyContent: "flex-start"}}>
+                <div className='projectButtons' id='projectButtonsOpp'>
                     <a className='siteButton' target="blank" href={props.project.liveLink}>View Site</a>
                     <a className='codeButton' target="blank" href={props.project.codeLink}>
                         <img onMouseEnter={gitGreen} onMouseLeave={gitLight} alt='The GitHub logo' src='/Images/GitHubLight.png' />
