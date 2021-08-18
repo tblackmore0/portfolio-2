@@ -40,13 +40,14 @@ app.post('/send', (req, res, next) => {
 //
   
   let mail = {
-    from: email,
+    from: 'tblackmore0@gmail.com',
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
 
     html:
     `
     <h3>Name: ${name}</h3>
+    <h3>Email: ${email}</h3>
 
     <p>${message}</p>
     
