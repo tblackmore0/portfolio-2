@@ -3,7 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mg = require("nodemailer-mailgun-transport");
-const { env, getMaxListeners } = require('process');
+const { env } = require('process');
 var sgTransport = require('nodemailer-sendgrid-transport');
 
 const app = express();
@@ -24,7 +24,7 @@ res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 let options  = {
   auth: {
     api_user: process.env.USER,
-    api_key: process.env.API
+    api_key: process.env.PASS
   }
 }
 
@@ -38,14 +38,13 @@ app.post('/send', (req, res, next) => {
 //
   
   let mail = {
-    from: 'tlackmore0@gmail.com',
+    from: email,
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
 
     html:
     `
     <h3>Name: ${name}</h3>
-    <h3>Email: ${email} </h3>
 
     <p>${message}</p>
     
