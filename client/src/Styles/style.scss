@@ -7,10 +7,33 @@
 @import "./copyright";
 
 
+html {
+  scroll-behavior: smooth;
+ // font-family: 'Roboto', sans-serif;
+ font-family: 'Space Grotesk', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color:$siteBackground;
     overflow-x: hidden;
+    overflow: overlay;
   }
-  
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: inherit;
+  z-index: 4;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d6a6a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $highlightText;
+}

@@ -33,21 +33,23 @@
   height: inherit;
   text-align: center;
   padding-top: 3vh;
+  padding-right: 2vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.navLinkDiv p {
+.navLinkDiv a {
   color: #02e499;
-  font-size: 2.5vh;
+  font-size: 3vh;
   -webkit-transition: ease-in-out, 0.4s;
   transition: ease-in-out, 0.4s;
   margin: 0;
   padding: 1vw;
+  text-decoration: none;
 }
 
-.navLinkDiv p:hover {
-  font-size: 3vh;
+.navLinkDiv a:hover {
+  font-size: 3.5vh;
   cursor: pointer;
 }
 
@@ -68,6 +70,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10%;
+  background-color: #272424;
 }
 
 .homeDiv #particlesJs {
@@ -107,7 +110,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 3%;
+  gap: 4%;
 }
 
 .homeDiv .homeText div p {
@@ -118,7 +121,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 12vh;
+  font-size: 11.5vh;
   color: #fff8f4;
   z-index: 3;
 }
@@ -202,6 +205,8 @@
 }
 
 .arrowDiv .homeArrow {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   color: #02e499;
   position: absolute;
   margin-left: 10px;
@@ -312,7 +317,7 @@
 }
 
 .projectsDiv {
-  height: 120vh;
+  height: auto;
   width: 100vw;
   background-color: #272424;
   display: -webkit-box;
@@ -328,6 +333,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 15vh;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
 }
 
 .projectsDiv h2 {
@@ -335,9 +343,6 @@
   font-size: 6vh;
   color: #02e499;
   height: 10%;
-  border-bottom: solid;
-  border-width: 2px;
-  border-color: #02e499;
   text-align: center;
   margin: 0;
 }
@@ -357,25 +362,23 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100vw;
-  height: 20%;
-  border-bottom: solid;
-  border-width: 2px;
-  border-color: #02e499;
+  height: 45vh;
 }
 
 .projectInstanceDiv img {
-  height: 100%;
+  height: 45vh;
   width: auto;
-  border: solid;
-  border-width: 2px;
-  border-color: #02e499;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
+  border: solid;
+  border-color: #5c5858;
+  border-width: 2px;
 }
 
 .projectInstanceDiv .textDiv {
   height: 100%;
-  width: 80vw;
+  width: 40vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,6 +392,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 3;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .projectInstanceDiv .textDiv h3 {
@@ -396,9 +403,32 @@
   color: #02e499;
 }
 
-.projectInstanceDiv .textDiv p {
-  font-size: 2vh;
+.projectInstanceDiv .textDiv .pDiv {
+  height: 15vh;
+  width: 45vw;
+  background-color: #0e0e0e;
+  text-align: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+}
+
+.projectInstanceDiv .textDiv .pDiv p {
+  font-size: 2.5vh;
   color: #fff8f4;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .projectInstanceDiv .textDiv .projectButtons {
@@ -418,27 +448,40 @@
   width: 100%;
   height: 20%;
   gap: 3vw;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .projectInstanceDiv .textDiv img {
   width: 2vw;
   height: auto;
   border: none;
+  z-index: 2;
 }
 
 .projectInstanceDiv .textDiv .siteButton {
-  width: 5vw;
+  padding-top: 0.5vh;
+  width: 6vw;
   height: 3vh;
   border: solid;
+  border-width: 2px;
   border-color: #02e499;
   color: #02e499;
   text-decoration: none;
   text-align: center;
   font-size: 2vh;
+  background-color: #272424;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #272424), color-stop(50%, #02e499)) right;
+  background: linear-gradient(to left, #272424 50%, #02e499 50%) right;
+  background-size: 200%;
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
 }
 
 .projectInstanceDiv .textDiv .siteButton:hover {
-  background-color: #02e499;
+  cursor: pointer;
+  background-position: left;
   color: #272424;
 }
 
@@ -448,6 +491,12 @@
   display: flex;
   margin: 0;
   padding: 0;
+}
+
+.backgroundImage {
+  position: absolute;
+  width: 20vw;
+  height: 20vh;
 }
 
 .contactDiv {
@@ -471,7 +520,7 @@
           justify-content: flex-start;
   gap: 2vh;
   background-color: #383232;
-  border: solid;
+  border-top: solid;
   border-width: 2px;
   border-color: #02e499;
 }
@@ -538,7 +587,7 @@
 
 .contactForm {
   width: 90vw;
-  height: 60vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,35 +619,20 @@
           flex-direction: column;
 }
 
-.contactForm form .formTop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 2vw;
-  width: 90vw;
-  height: 1vh;
-}
-
-.contactForm form .formTop input {
+.contactForm form input {
   width: 20vw;
-  height: auto;
+  height: 5vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
   font-size: 2.3vh;
   background-color: #272424;
   color: #fff8f4;
   border: none;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
 }
 
-.contactForm form .formBottom {
+.contactForm .formBottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,32 +651,42 @@
   height: 50vh;
 }
 
-.contactForm form .formBottom textarea {
+.contactForm .formBottom textarea {
   width: 50vw;
-  font-size: 2vh;
+  font-size: 2.3vh;
   height: 40vh;
   background-color: #272424;
   color: #fff8f4;
   border: none;
   resize: none;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font: inherit;
 }
 
-.contactForm form button {
+.contactForm button {
   width: 5vw;
   height: 4vh;
   border: solid;
   border-color: #02e499;
+  border-width: 2px;
   color: #02e499;
   text-decoration: none;
   text-align: center;
   font-size: 2vh;
-  background: none;
-  border-width: 2px;
+  background-color: #272424;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #383232), color-stop(50%, #02e499)) right;
+  background: linear-gradient(to left, #383232 50%, #02e499 50%) right;
+  background-size: 200%;
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
 }
 
-.contactForm form button:hover {
+.contactForm button:hover {
   cursor: pointer;
-  background-color: #02e499;
+  background-position: left;
   color: #272424;
 }
 
@@ -658,11 +702,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #272424;
+  gap: 10vw;
 }
 
 .copyrightDiv p {
@@ -671,10 +716,48 @@
   font-weight: inherit;
 }
 
+.copyrightDiv img {
+  width: 2vw;
+  height: auto;
+  border: none;
+  z-index: 2;
+}
+
+.copyrightDiv .codeButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #272424;
   overflow-x: hidden;
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: inherit;
+  z-index: 4;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d6a6a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #02e499;
 }
 /*# sourceMappingURL=style.css.map */

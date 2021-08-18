@@ -1,17 +1,17 @@
 .projectsDiv {
-    height: 120vh;
+    height: auto;
     width: 100vw;
     background-color: $siteBackground;
     @include flexCenter(column);
+    gap: 15vh;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
 
     h2 {
         width: 100vw;
         font-size: 6vh;
         color: $highlightText;
         height: 10%;
-        border-bottom: solid;
-        border-width: 2px;
-        border-color: $highlightText;
         text-align: center;
         margin: 0;
     }
@@ -20,37 +20,52 @@
 .projectInstanceDiv {
     @include flexCenter(row);
     width: 100vw;
-    height: 20%;
-    border-bottom: solid;
-    border-width: 2px;
-    border-color: $highlightText;
+    height: 45vh;
 
     img {
-        height: 100%;
+        height: 45vh;
         width: auto;
-        border: solid;
-        border-width: 2px;
-        border-color: $highlightText;
         object-fit: cover;
+        border-radius: 10px;
+        border: solid;
+        border-color: rgb(92, 88, 88);
+        border-width: 2px;
     }
 
     .textDiv {
         height: 100%;
-        width: 80vw;
+        width: 40vw;
         @include flexCenter (column);
+        z-index: 3;
+        align-items: flex-end;
+
+
         h3 {
             font-size: 3.5vh;
             color: $highlightText;
         }
+
+        .pDiv {
+            height: 15vh;
+            width: 45vw;
+            background-color: rgb(14, 14, 14);
+            text-align: end;
+            @include flexCenter(column);
+            border-radius: 10px;
+        
         p {
-            font-size: 2vh;
+            font-size: 2.5vh;
             color: $primaryText;
-        }
+            margin-left: 2vw;
+            margin-right: 2vw;
+            
+        }}
         .projectButtons {
             @include flexCenter (row);
             width: 100%;
             height: 20%;
             gap: 3vw;
+            justify-content: flex-end;
             
         }
 
@@ -58,29 +73,43 @@
             width: 2vw;
             height: auto;
             border: none; 
+            z-index: 2;
         }
 
         .siteButton {
-            width: 5vw;
+            padding-top: 0.5vh;
+            width: 6vw;
             height: 3vh;
             border: solid;
+            border-width: 2px;
             border-color: $highlightText;
             color: $highlightText;
             text-decoration: none;
             text-align: center;
             font-size: 2vh;
-
-
+            background-color: $siteBackground;
+            background: linear-gradient(to left, $siteBackground 50%, $highlightText 50%) right;
+            background-size: 200%;
+            transition: .5s ease-out;
+    
             &:hover {
-                background-color: $highlightText;
+                cursor: pointer;
+                background-position: left;
                 color: $siteBackground;
             }}
 
         .codeButton {
             display: flex;
             margin: 0;
-        padding: 0;        
+            padding: 0;        
     }
 
     }
+}
+
+
+.backgroundImage {
+    position: absolute;
+    width: 20vw;
+    height: 20vh;
 }

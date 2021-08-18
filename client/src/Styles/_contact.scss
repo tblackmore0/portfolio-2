@@ -5,7 +5,7 @@
     justify-content: flex-start;
     gap: 2vh;
     background-color: rgb(56, 50, 50);
-    border: solid;
+    border-top: solid;
         border-width: 2px;
         border-color: $highlightText;
 
@@ -55,26 +55,23 @@
 
 .contactForm {
     width: 90vw;
-    height: 60vh;
+    height: 70vh;
     @include flexCenter (column);
 
     form { 
         @include flexCenter(column);
 
-    .formTop {
-        @include flexCenter (row);
-        gap: 2vw;
-        width: 90vw;
-        height: 1vh;
-
-
         input{
             width: 20vw;
-            height: auto;
+            height: 5vh;
+            padding-left: 1vw;
+            padding-right: 1vw;
             font-size: 2.3vh;
             background-color: $siteBackground;
             color: $primaryText;
             border: none;
+            margin-right: 1.5vw;
+            margin-left: 1.5vw;
         }
 
     }
@@ -87,12 +84,18 @@
 
         textarea {
             width: 50vw;
-            font-size: 2vh;
+            font-size: 2.3vh;
             height: 40vh;
             background-color: $siteBackground;
             color: $primaryText;
             border: none;
             resize: none;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            font: inherit;
+
         }
 
     }
@@ -102,18 +105,20 @@
         height: 4vh;
         border: solid;
         border-color: $highlightText;
+        border-width: 2px;
         color: $highlightText;
         text-decoration: none;
         text-align: center;
         font-size: 2vh;
-        background: none;
-        border-width: 2px;
+        background-color: $siteBackground;
+        background: linear-gradient(to left, rgb(56, 50, 50) 50%, $highlightText 50%) right;
+        background-size: 200%;
+        transition: .5s ease-out;
 
         &:hover {
             cursor: pointer;
-            background-color: $highlightText;
+            background-position: left;
             color: $siteBackground;
         }
     }
-}
 }

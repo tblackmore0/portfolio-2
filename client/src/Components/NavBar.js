@@ -5,9 +5,9 @@ function NavBar () {
     return (
         <div className='navBar'>
             <div className='navLinkSection'>
-                <NavLink title={'about'}/>
-                <NavLink title={'projects'}/>
-                <NavLink title={'contact'}/>
+                <NavLink title={'about'} link={'#about'}/>
+                <NavLink title={'projects'} link={'#projects'}/>
+                <NavLink title={'contact'} link={'#contact'}/>
             </div>
         </div>
     )

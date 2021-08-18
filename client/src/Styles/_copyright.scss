@@ -1,12 +1,26 @@
 .copyrightDiv {
     width: 100vw;
     height: 10vh;
-    @include flexCenter (column);
+    @include flexCenter (row);
     background-color: $siteBackground;
+    gap: 10vw;
 
     p {
         font-size: 2.5vh;
         color: $primaryText;
         font-weight: inherit;
     }
+
+    img {
+        width: 2vw;
+        height: auto;
+        border: none; 
+        z-index: 2;
+    }
+
+    .codeButton {
+        display: flex;
+        margin: 0;
+        padding: 0;        
+}
 }

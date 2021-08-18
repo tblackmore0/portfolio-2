@@ -7,7 +7,7 @@ function Home () {
             params={{
                 "particles": {
                     "number": {
-                      "value": 34,
+                      "value": 44,
                       "density": {
                         "enable": true,
                         "value_area": 561.194221302933

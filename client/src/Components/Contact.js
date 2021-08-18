@@ -46,11 +46,11 @@ function Contact () {
 
 
     return (
-        <div className='contactDiv'>
+        <div className='contactDiv' id='contact'>
 
             <div className='contactDetails'>
                 <a className='contactIcon' target="blank" href="https://github.com/tblackmore0">
-                        <img onMouseEnter={gitGreen} onMouseLeave={gitLight} alt='' src='/Images/GitHubLight.png' />
+                        <img onMouseEnter={gitGreen} onMouseLeave={gitLight} alt='The GitHub logo' src='/Images/GitHubLight.png' />
                 </a>
                 <div className='contactText'>
                 <h2>Contact</h2>
@@ -58,7 +58,7 @@ function Contact () {
                 <p>07516677681</p>
             </div>
                 <a className='contactIcon' target="blank" href="https://www.linkedin.com/in/thomas-blackmore-68613217b/">
-                        <img onMouseEnter={linkedGreen} onMouseLeave={linkedLight} alt='' src='/Images/linkedLight.png' />
+                        <img onMouseEnter={linkedGreen} onMouseLeave={linkedLight} alt='The LinkedIn logo' src='/Images/linkedLight.png' />
                 </a>
             </div>
 

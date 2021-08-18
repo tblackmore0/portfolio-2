@@ -29,15 +29,17 @@
       height: inherit;
       text-align: center;
       padding-top: 3vh;
+      padding-right: 2vw;
       box-sizing: border-box;
-      p {
+      a {
         color: $highlightText;
-        font-size: 2.5vh;
+        font-size: 3vh;
         transition: ease-in-out, 0.4s;
         margin: 0;
         padding: 1vw;
+        text-decoration: none;
         &:hover {
-            font-size: 3vh;
+            font-size: 3.5vh;
             cursor: pointer;
           }
       }

@@ -4,7 +4,7 @@ import { Home } from './Components/Home';
 import { About } from './Components/About';
 import { Projects } from './Components/Projects';
 import { Contact } from './Components/Contact';
-import { Copyright } from './Components/Copyright';
+//import { Copyright } from './Components/Copyright';
 
 
 function App() {
@@ -16,7 +16,6 @@ function App() {
       <About />
       <Projects />
       <Contact />
-      <Copyright />
     </div>
   );
 }

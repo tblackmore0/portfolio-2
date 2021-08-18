@@ -43,8 +43,8 @@ app.post('/send', (req, res, next) => {
 
     html:
     `
-    <h2>Name: ${name}</h2>
-    <br>
+    <h3>Name: ${name}</h3>
+
     <p>${message}</p>
     
     `,

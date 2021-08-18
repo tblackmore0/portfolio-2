@@ -1,4 +1,5 @@
 import { ProjectInstance } from './ProjectInstance';
+import React from 'react';
 
 function Projects () {
 
@@ -30,17 +31,27 @@ function Projects () {
             description: 'A simple game application built in Vanilla Javascript that exhibits game logic and DOM manipulation. ',
             codeLink: 'https://github.com/tblackmore0/rock_paper_scissors.git',
             liveLink: 'https://tblackmore0.github.io/rock_paper_scissors/',
-        },
+        }
+  /*      {
+            title: 'Portfolio',
+            img: '/Images/Portfolio.png',
+            description: 'This site! Built using React, with a contact form set up through Express and MailGun email API.',
+            codeLink: 'https://github.com/tblackmore0/portfolio-2.git',
+            liveLink: 'https://tblackmore.herokuapp.com/',
+        }*/
     ]
-
+    
     return (
-        <div className='projectsDiv'>
+
+
+        <div className='projectsDiv' id='projects'>
             <h2>Projects</h2>
-            <ProjectInstance project={projects[0]} />
-            <ProjectInstance project={projects[1]} />
-            <ProjectInstance project={projects[2]} />
-            <ProjectInstance project={projects[3]} />
-        </div>
+            <ProjectInstance project={projects[0]} id={1}/>
+            <ProjectInstance project={projects[1]} id={2}/>
+            <ProjectInstance project={projects[2]} id={3}/>
+            <ProjectInstance project={projects[3]} id={4}/>
+   {//         <ProjectInstance project={projects[4]} id={5}/> 
+       }       </div>
     )
 }
 

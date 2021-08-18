@@ -1,7 +1,7 @@
 function NavLink (props) {
     return (
         <div className='navLinkDiv'>
-            <p>{props.title}</p>
+            <a href={props.link}>{props.title}</a>
         </div>
     )
 }

@@ -3,6 +3,7 @@
     height: 100vh;
     @include flexCenter (column);
     gap: 10%;
+    background-color: $siteBackground;
 
 #particlesJs {
     z-index: 1;
@@ -25,14 +26,14 @@
     div {
         display: flex;
         flex-direction: row;
-        gap: 3%;
+        gap: 4%;
         
     
 
     p {
         display: flex;
         flex-direction: row;
-        font-size: 12vh;
+        font-size: 11.5vh;
         color: $primaryText;
         z-index: 3;
         
@@ -98,6 +99,7 @@
     }
 
 .homeArrow {
+    transform: scale(1.5);
     color: $highlightText;
     position: absolute;
     margin-left: 10px;
