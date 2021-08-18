@@ -3,7 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mg = require("nodemailer-mailgun-transport");
-const { env } = require('process');
+const { env, getMaxListeners } = require('process');
 var sgTransport = require('nodemailer-sendgrid-transport');
 
 const app = express();
@@ -38,13 +38,14 @@ app.post('/send', (req, res, next) => {
 //
   
   let mail = {
-    from: email,
+    from: 'tlackmore0@gmail.com',
     to: 'tblackmore0@gmail.com',
     subject: 'Portfolio message',
 
     html:
     `
     <h3>Name: ${name}</h3>
+    <h3>Email: ${email} </h3>
 
     <p>${message}</p>
     
