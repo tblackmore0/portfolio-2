@@ -21,14 +21,16 @@ res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 
-let options  = {
-  auth: {
-    api_user: process.env.USER,
-    api_key: process.env.PASS
-  }
-}
 
-let client = nodemailer.createTransport(sgTransport(options));
+let transporter = nodemailer.createTransport({
+  host: "in-v3.mailjet.com",
+  port: 25 || 587,
+  secure: false,
+  auth: {
+    user: process.env.USER,
+    pass: process.env.PASS
+  },
+});
 
 //POST
 app.post('/send', (req, res, next) => {
@@ -53,7 +55,7 @@ app.post('/send', (req, res, next) => {
     text: message,
   };
 
-  client.sendMail(mail, (err) => {
+  transporter.sendMail(mail, (err) => {
     if (err) {
       res.json({
         msg: err
