@@ -22,8 +22,8 @@ res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 
 let mailgunAuth = {
   auth: {
-    api_key: "83b3511e44e04bf89532179fb51e8634-9776af14-a8e85238",
-    domain: "sandbox5e183501eea040f4819e22e263a76265.mailgun.org"
+    api_key: process.env.API,
+    domain: process.env.DOMAIN
   }
 }
 
@@ -34,7 +34,7 @@ app.post('/send', (req, res, next) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.text;
-
+//
   
   let mail = {
     from: email,
