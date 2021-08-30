@@ -67,6 +67,15 @@
   }
 }
 
+@media only screen and (max-width: 1000px) and (min-width: 501px) {
+  .navLinkDiv {
+    margin-right: 3vw;
+  }
+  .navLinkDiv a {
+    font-size: 2vw;
+  }
+}
+
 .homeDiv {
   width: 100vw;
   height: 100vh;
@@ -442,6 +451,15 @@
   }
 }
 
+@media only screen and (max-width: 800px) and (min-width: 501px) {
+  .aboutText h2 {
+    font-size: 5vw;
+  }
+  .aboutText p {
+    font-size: 2.2vw;
+  }
+}
+
 .projectsDiv {
   height: auto;
   width: 100vw;
@@ -720,6 +738,32 @@
   }
 }
 
+@media only screen and (max-width: 1000px) and (min-width: 501px) {
+  .projectsDiv {
+    gap: 1.2vh;
+  }
+  .projectsDiv h2 {
+    font-size: 5vw;
+  }
+  .projectInstanceDiv {
+    height: 55vh;
+  }
+  .projectInstanceDiv .textDiv h3 {
+    font-size: 3.8vw;
+  }
+  .projectInstanceDiv .textDiv .pDiv {
+    height: 25vh;
+  }
+  .projectInstanceDiv .textDiv .pDiv p {
+    font-size: 2vw;
+  }
+  .projectInstanceDiv .projectButtons .siteButton {
+    width: 10vw;
+    font-size: 1.8vw;
+    padding-bottom: 1%;
+  }
+}
+
 .contactDiv {
   width: 100vw;
   height: 100vh;
@@ -987,6 +1031,27 @@
     height: 8%;
     margin-top: 5%;
     font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 501px) {
+  .contactDetails img {
+    width: 5vw;
+  }
+  .contactDetails .contactText h2 {
+    font-size: 4vw;
+  }
+  .contactDetails .contactText p {
+    font-size: 2vw;
+  }
+  .contactForm form input {
+    font-size: 2vw;
+  }
+  .contactForm form .formBottom textArea {
+    font-size: 2vw;
+  }
+  .contactForm form button {
+    font-size: 2vw;
   }
 }
 
