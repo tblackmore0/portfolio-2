@@ -18,7 +18,7 @@ function ProjectInstance (props) {
     return  (
 
         <div className='projectInstanceDiv'>
-            <img alt='' src={props.project.img} />
+            <img alt='A screenshot of the live project site' id='projectScreenshotEven' src={props.project.img} />
             <div className='textDiv'>
                 <h3>{props.project.title}</h3>
                 <div className='pDiv'>
@@ -27,7 +27,7 @@ function ProjectInstance (props) {
                 <div className='projectButtons'>
                     <a className='siteButton' target="blank" href={props.project.liveLink}>View Site</a>
                     <a className='codeButton' target="blank" href={props.project.codeLink}>
-                        <img onMouseEnter={gitGreen} onMouseLeave={gitLight} alt='A screenshot of the live project site' src='/Images/GitHubLight.png' />
+                        <img onMouseEnter={gitGreen} onMouseLeave={gitLight} alt='The GitHub logo' src='/Images/GitHubLight.png' />
                     </a>
                 </div>
             </div>
@@ -52,7 +52,7 @@ function ProjectInstance (props) {
                     </a>
                 </div>
             </div>
-            <img alt='A screenshot of the live project site' src={props.project.img} />
+            <img id='projectScreenshotOdd' alt='A screenshot of the live project site' src={props.project.img} />
         </div>
 
         )

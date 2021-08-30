@@ -32,6 +32,14 @@
         border-width: 2px;
     }
 
+    #projectScreenshotEven {
+        box-shadow: -5px 10px 10px;
+    }
+
+    #projectScreenshotOdd {
+        box-shadow: 5px 10px 10px;
+    }
+
     .textDiv {
         height: 100%;
         width: 40vw;
@@ -46,7 +54,7 @@
         }
 
         .pDiv {
-            height: 15vh;
+            height: 18vh;
             width: 45vw;
             background-color: rgb(14, 14, 14);
             text-align: end;
@@ -127,7 +135,7 @@
     @media only screen and (max-width: 500px) {
 
         .projectsDiv {
-            height: 350vh;
+            height: 430vh;
             gap: 10vh;
 
             h2 {
@@ -160,7 +168,7 @@
 
             .pDiv {
                 width: 85vw;
-                height: 20vh;
+                height: 25vh;
                 text-align: center;
 
                 p {

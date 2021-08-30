@@ -12,7 +12,7 @@ function About () {
                     <h2>Skills</h2>
                     <p> Front-end: React, Javascript, CSS, SASS/SCSS, HTML </p>
                     <p> Back-end: Node, Express</p>
-                    <p> Development tools: Git/GitHub, Webpack, Heroku, NPM</p>
+                    <p> Development tools: Git/GitHub, Webpack, Adobe Photoshop/Illustrator, Heroku, NPM</p>
 
             </div>
             </div>

@@ -49,7 +49,7 @@
 }
 
 .navLinkDiv a:hover {
-  font-size: 2vw;
+  font-size: 1.7vw;
   cursor: pointer;
 }
 
@@ -502,6 +502,16 @@
   border-width: 2px;
 }
 
+.projectInstanceDiv #projectScreenshotEven {
+  -webkit-box-shadow: -5px 10px 10px;
+          box-shadow: -5px 10px 10px;
+}
+
+.projectInstanceDiv #projectScreenshotOdd {
+  -webkit-box-shadow: 5px 10px 10px;
+          box-shadow: 5px 10px 10px;
+}
+
 .projectInstanceDiv .textDiv {
   height: 100%;
   width: 40vw;
@@ -530,7 +540,7 @@
 }
 
 .projectInstanceDiv .textDiv .pDiv {
-  height: 15vh;
+  height: 18vh;
   width: 45vw;
   background-color: #0e0e0e;
   text-align: end;
@@ -637,7 +647,7 @@
 
 @media only screen and (max-width: 500px) {
   .projectsDiv {
-    height: 350vh;
+    height: 430vh;
     gap: 10vh;
   }
   .projectsDiv h2 {
@@ -673,7 +683,7 @@
   }
   .projectInstanceDiv .textDiv .pDiv {
     width: 85vw;
-    height: 20vh;
+    height: 25vh;
     text-align: center;
   }
   .projectInstanceDiv .textDiv .pDiv p {
